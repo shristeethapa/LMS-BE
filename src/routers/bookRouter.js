@@ -12,6 +12,6 @@ router.post("/", authenticate, isAdmin, createBookValidator, createBook);
 
 //GET api/v1/books
 
-// router.get("/", authenticate, getBook);
+router.get("/", authenticate, getBook);
 
 export default router;
