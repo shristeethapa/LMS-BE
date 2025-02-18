@@ -1,0 +1,44 @@
+@rooturl=http://localhost:9001/api/v1
+@authEP = {{rooturl}}/auth
+@bookEP = {{rooturl}}/books
+
+###
+POST {{authEP}}/login
+Content-Type: application/json
+
+{
+    "email" : "shree@gmail.com",
+    "password" : "password"
+}
+
+###
+POST {{authEP}}/register
+Content-Type: application/json
+
+{
+    "fName" : "shristi",
+    "lName" : "thapa",
+    "email": "shree@gmail.com",
+    "phone": "123456",
+    "password": "password"
+}
+
+###
+
+GET {{authEP}}
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNocmVlQGdtYWlsLmNvbSIsImlhdCI6MTczOTg0MDI5MSwiZXhwIjoxNzM5OTI2NjkxfQ.ayO4H7JwLsgS33KzuY_KPyvD-taJrA1P8GZTyKB-6LE
+
+###
+
+POST {{bookEP}}
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNocmVlQGdtYWlsLmNvbSIsImlhdCI6MTczOTg0MDI5MSwiZXhwIjoxNzM5OTI2NjkxfQ.ayO4H7JwLsgS33KzuY_KPyvD-taJrA1P8GZTyKB-6LE
+
+{
+    "title": "muna madan",
+    "author": " book author",
+    "thumbnail":"https://wallpapercave.com/wp/rdyAno5.jpg",
+    "isbn": "12345",
+    "genre": "love",
+    "publishedYear": 2020
+}
